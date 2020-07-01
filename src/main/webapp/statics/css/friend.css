@@ -1,0 +1,80 @@
+.channel{
+    width:100%;
+    height:64px;
+    /*background-color:#D9D8D8;*/
+}
+[selected=true]{
+    width:100%;
+    height:64px;
+    background-color:#C5C4C4;
+}
+.channel .avatar{
+    margin:12px;
+    width:40px;
+    height:40px;
+    float:left;
+}
+.channel .channel_info{
+    width:174px;
+    height:auto;
+    float:left;
+    padding:12px;
+    padding-left:0;
+}
+
+.channel .channel_info .first_line{
+    width:100%;
+    height:20px;
+    display:flex;
+
+}
+.channel .channel_info .second_line{
+    width:100%;
+    height:20px;
+    display:flex;
+
+}
+.channel .channel_info .first_line .name{
+    height:100%;
+    flex:1;
+    width:100%;
+    float:left;
+    color:black;
+    line-height: 20px;
+    font-size:medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.channel .channel_info .first_line .time{
+    height:100%;
+    width:auto;
+    float:right;
+    color:#B9B9B9;
+    line-height: 20px;
+    font-size:small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.channel .channel_info .second_line .preview {
+    height: 100%;
+    flex:1;
+    width: 100%;
+    color: #B9B9B9;
+    line-height: 20px;
+    font-size:xx-small;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.channel .channel_info .second_line .alert{
+    height:auto;
+    width:auto;
+
+    
+}
+
+

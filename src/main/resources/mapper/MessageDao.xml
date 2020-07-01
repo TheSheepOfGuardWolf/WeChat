@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Mapper.xml 必须要包含上面的DTD头部（DOCTYPE）  -->
+
+<!-- namespace为命名空间，应该是mapper接口的全称-->
+<mapper namespace="example.dao.MessageDao">
+
+    <insert id="addMessage" parameterType="example.pojo.Message">
+        <selectKey keyProperty="msgId" order="AFTER" resultType="java.lang.Integer">
+            SELECT last_insert_id()
+        </selectKey>
+        INSERT INTO Message (msgType, content, fromUserId, toId, timeStamp) value (#{msgType}, #{content}, #{fromUserId}, #{toId}, #{timeStamp})
+        <!-- 使用mysql的uuid非自增的生成主键，先用selectKey的BEFORE生成主键，填充到Message的id中，
+            注意uuid生成的主键需要为String类型。
+            在insert语句中需要填写id属性，此时id属性是uuid已经填充好的情况。
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            SELECT uuid()
+        </selectKey>
+        INSERT INTO Message (id,Messagename,birthday,sex,address) value (#{id},#{Messagename},#{birthday},#{sex},#{address})
+        -->
+    </insert>
+
+
+
+</mapper>

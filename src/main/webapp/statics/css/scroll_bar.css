@@ -1,0 +1,11 @@
+::-webkit-scrollbar{
+    width: 6px;
+
+}
+::-webkit-clear-button{
+    /*display:none;*/
+}
+::-webkit-scrollbar-thumb{
+    background-color:#D2D2D2;
+    border-radius:4px;
+}
